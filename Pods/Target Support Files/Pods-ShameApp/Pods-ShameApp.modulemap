@@ -1,0 +1,6 @@
+framework module Pods_ShameApp {
+  umbrella header "Pods-ShameApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

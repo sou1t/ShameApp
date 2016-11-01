@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        VKSdk.initialize(withAppId: "4934283")
+        application.statusBarStyle = .lightContent
         // Override point for customization after application launch.
         return true
     }

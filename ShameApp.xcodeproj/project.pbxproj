@@ -12,9 +12,18 @@
 		3F37E5501DC7755E0039B5EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E54E1DC7755E0039B5EF /* Main.storyboard */; };
 		3F37E5521DC7755E0039B5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E5511DC7755E0039B5EF /* Assets.xcassets */; };
 		3F37E5551DC7755E0039B5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E5531DC7755E0039B5EF /* LaunchScreen.storyboard */; };
+		3F37E55D1DC775B00039B5EF /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E55C1DC775B00039B5EF /* Gradient.swift */; };
+		3F37E55F1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */; };
+		3F37E5611DC77D670039B5EF /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */; };
+		3F37E5631DC77E530039B5EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E5621DC77E530039B5EF /* ProfileViewController.swift */; };
+		3FF98F281DC786BE00D43F8C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98F271DC786BE00D43F8C /* Person.swift */; };
+		3FF98F2A1DC78BA800D43F8C /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98F291DC78BA800D43F8C /* FriendTableViewCell.swift */; };
+		74ACFE4BE9174EC9CC10A164 /* Pods_ShameApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64BE41D849812A0BFC3EB03 /* Pods_ShameApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B1C6F7D5A3EA6AF61106D46 /* Pods-ShameApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShameApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShameApp/Pods-ShameApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2E7FDF4BBA1D234369E2B9D5 /* Pods-ShameApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShameApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShameApp/Pods-ShameApp.release.xcconfig"; sourceTree = "<group>"; };
 		3F37E5471DC7755E0039B5EF /* ShameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F37E54A1DC7755E0039B5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F37E54C1DC7755E0039B5EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,13 @@
 		3F37E5511DC7755E0039B5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F37E5541DC7755E0039B5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F37E5561DC7755E0039B5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F37E55C1DC775B00039B5EF /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7fonts.ru_mistral.ttf; sourceTree = "<group>"; };
+		3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		3F37E5621DC77E530039B5EF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3FF98F271DC786BE00D43F8C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3FF98F291DC78BA800D43F8C /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		A64BE41D849812A0BFC3EB03 /* Pods_ShameApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShameApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74ACFE4BE9174EC9CC10A164 /* Pods_ShameApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,8 @@
 			children = (
 				3F37E5491DC7755E0039B5EF /* ShameApp */,
 				3F37E5481DC7755E0039B5EF /* Products */,
+				7DFFB125E316E4D457CD80AF /* Pods */,
+				EA088AFFE982E04A6319C448 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,37 @@
 		3F37E5491DC7755E0039B5EF /* ShameApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */,
 				3F37E54A1DC7755E0039B5EF /* AppDelegate.swift */,
 				3F37E54C1DC7755E0039B5EF /* ViewController.swift */,
 				3F37E54E1DC7755E0039B5EF /* Main.storyboard */,
 				3F37E5511DC7755E0039B5EF /* Assets.xcassets */,
 				3F37E5531DC7755E0039B5EF /* LaunchScreen.storyboard */,
 				3F37E5561DC7755E0039B5EF /* Info.plist */,
+				3F37E55C1DC775B00039B5EF /* Gradient.swift */,
+				3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */,
+				3F37E5621DC77E530039B5EF /* ProfileViewController.swift */,
+				3FF98F271DC786BE00D43F8C /* Person.swift */,
+				3FF98F291DC78BA800D43F8C /* FriendTableViewCell.swift */,
 			);
 			path = ShameApp;
+			sourceTree = "<group>";
+		};
+		7DFFB125E316E4D457CD80AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C6F7D5A3EA6AF61106D46 /* Pods-ShameApp.debug.xcconfig */,
+				2E7FDF4BBA1D234369E2B9D5 /* Pods-ShameApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA088AFFE982E04A6319C448 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A64BE41D849812A0BFC3EB03 /* Pods_ShameApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F37E5591DC7755E0039B5EF /* Build configuration list for PBXNativeTarget "ShameApp" */;
 			buildPhases = (
+				4799338CB7A868F440C9A2D0 /* [CP] Check Pods Manifest.lock */,
 				3F37E5431DC7755E0039B5EF /* Sources */,
 				3F37E5441DC7755E0039B5EF /* Frameworks */,
 				3F37E5451DC7755E0039B5EF /* Resources */,
+				A8E28E40913B6B255F7A4894 /* [CP] Embed Pods Frameworks */,
+				1D76B96BF61009C752A42259 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,19 +171,73 @@
 			files = (
 				3F37E5551DC7755E0039B5EF /* LaunchScreen.storyboard in Resources */,
 				3F37E5521DC7755E0039B5EF /* Assets.xcassets in Resources */,
+				3F37E55F1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf in Resources */,
 				3F37E5501DC7755E0039B5EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D76B96BF61009C752A42259 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShameApp/Pods-ShameApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4799338CB7A868F440C9A2D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8E28E40913B6B255F7A4894 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShameApp/Pods-ShameApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F37E5431DC7755E0039B5EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF98F281DC786BE00D43F8C /* Person.swift in Sources */,
+				3F37E5611DC77D670039B5EF /* FriendsListViewController.swift in Sources */,
 				3F37E54D1DC7755E0039B5EF /* ViewController.swift in Sources */,
+				3F37E5631DC77E530039B5EF /* ProfileViewController.swift in Sources */,
 				3F37E54B1DC7755E0039B5EF /* AppDelegate.swift in Sources */,
+				3F37E55D1DC775B00039B5EF /* Gradient.swift in Sources */,
+				3FF98F2A1DC78BA800D43F8C /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +356,7 @@
 		};
 		3F37E55A1DC7755E0039B5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B1C6F7D5A3EA6AF61106D46 /* Pods-ShameApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 58D38XLN7V;
@@ -270,6 +370,7 @@
 		};
 		3F37E55B1DC7755E0039B5EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7FDF4BBA1D234369E2B9D5 /* Pods-ShameApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 58D38XLN7V;
@@ -300,6 +401,7 @@
 				3F37E55B1DC7755E0039B5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
