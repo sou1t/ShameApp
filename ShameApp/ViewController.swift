@@ -9,20 +9,39 @@
 import UIKit
 import VK_ios_sdk
 import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     var friends = [Person]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        activity.stopAnimating()
         let gradient = CAGradientLayer().makeLayer()
         gradient.frame = self.view.bounds
         self.view.layer.insertSublayer(gradient, at: 0)
-
+        if sessionIsActive() {
+            Alamofire.request("http://fastswapp.ru/friendsShow?user_id=\(UserDefaults.standard.value(forKey: "id") as? String ?? "")", method: .get).responseJSON { response in
+                
+                if let json = response.result.value {
+                    let resultArray = JSON(json).array
+                    for friend in resultArray!
+                    {
+//                        print("\(friend["id"].rawValue) \(friend["name"].string!) \(friend["photoURL"].string!) \(friend["shame"].string!)\n")
+                        if (friend["photoURL"].string != nil){
+                            self.friends.append(Person(id: friend["id"].string!, name: friend["name"].string!, photo: friend["photoURL"].string!, shame: friend["shame"].string!))}
+                    }
+                    self.activity.stopAnimating()
+                    self.performSegue(withIdentifier: "MainToNext", sender: self)
+                }
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func vkLoginPressed(_ sender: UIButton) {
+        activity.startAnimating()
         VKSdk.instance().register(self)
         VKSdk.instance().uiDelegate = self
         
@@ -46,13 +65,24 @@ class ViewController: UIViewController {
         
         let barViewControllers = segue.destination as! UITabBarController
         let nav = barViewControllers.viewControllers![0] as! FriendsListViewController
-        let lk = barViewControllers.viewControllers![1] as! ProfileViewController
+        //let lk = barViewControllers.viewControllers![1] as! ProfileViewController
+        
         //let destinationViewController = nav.topViewController as! FriendsListViewController
         
         nav.friends = self.friends
     }
 
 
+    func sessionIsActive() -> (Bool) {
+        let id = UserDefaults.standard.value(forKey: "id") as? String ?? ""
+        if id != "" {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
 }
 
 extension ViewController:VKSdkDelegate, VKSdkUIDelegate{
@@ -61,50 +91,22 @@ extension ViewController:VKSdkDelegate, VKSdkUIDelegate{
     // MARK: - VKSdkDelegate
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        
-        let request = VKApi.friends().get([VK_API_FIELDS : "first_name, last_name, uid, photo_50"])
-        
-        request?.waitUntilDone = true
-        request?.execute(resultBlock: {
-            (res) in
-            let json = res?.json
-            let parsed = JSON(json)
-            let arr = parsed["items"].array
-            for item in arr!{
-                self.friends.append(Person(id: item["id"].stringValue, name: item["first_name"].stringValue, surname: item["last_name"].stringValue, photo: item["photo_50"].stringValue))
-                
+        UserDefaults.standard.set("\(result.token.userId!)", forKey: "id")
+        Alamofire.request("http://fastswapp.ru/friendsShow?user_id=\(result.token.userId!)", method: .get).responseJSON { response in
+            
+            if let json = response.result.value {
+                let resultArray = JSON(json).array
+                for friend in resultArray!
+                {
+                    print("\(friend["id"].rawValue) \(friend["name"].string!) \(friend["photoURL"].string!) \(friend["shame"].string!)\n")
+                    self.friends.append(Person(id: friend["id"].string!, name: friend["name"].string!, photo: friend["photoURL"].string!, shame: friend["shame"].string!))
+                }
+                self.activity.stopAnimating()
+                self.performSegue(withIdentifier: "MainToNext", sender: self)
             }
-            self.performSegue(withIdentifier: "MainToNext", sender: self)
-            },
-                         errorBlock:
-            {
-                (err) in
-                print(err)
-        })
+        }
         
-        
-        let request2 = VKApi.users().get([VK_API_FIELDS : "first_name, last_name, uid, photo_200"])
-        
-        request2?.waitUntilDone = true
-        request2?.execute(resultBlock: {
-            (res) in
-            let json = res?.json
-            let parsed = JSON(json)
-            print(parsed)
-            let name = parsed[0]["first_name"].string
-            let surname = parsed[0]["last_name"].string
-            let photo = parsed[0]["photo_200"].string
-            UserDefaults.standard.set("\(name!) \(surname!)", forKey: "name")
-            UserDefaults.standard.set(photo!, forKey: "photo")
-            },
-                                       errorBlock:
-            {
-                (err) in
-                print(err)
-                
-        })
-
-        
+    
     }
     
     func vkSdkUserAuthorizationFailed() {

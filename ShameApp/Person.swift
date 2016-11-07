@@ -7,19 +7,18 @@
 //
 
 import Foundation
-import VK_ios_sdk
-import SwiftyJSON
 
 class Person {
     var id: Int
     var name: String
-    var surname: String
     var photo: String
+    var shame: String
     
-    init(id: String, name: String, surname:String, photo: String) {
+    init(id: String, name: String, photo: String, shame: String) {
         self.id = Int(id)!
         self.name = name
-        self.surname = surname
         self.photo = photo
+        self.shame = shame
     }
+    
 }

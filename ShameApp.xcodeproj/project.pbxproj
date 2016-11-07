@@ -10,12 +10,16 @@
 		3F37E54B1DC7755E0039B5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E54A1DC7755E0039B5EF /* AppDelegate.swift */; };
 		3F37E54D1DC7755E0039B5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E54C1DC7755E0039B5EF /* ViewController.swift */; };
 		3F37E5501DC7755E0039B5EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E54E1DC7755E0039B5EF /* Main.storyboard */; };
-		3F37E5521DC7755E0039B5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E5511DC7755E0039B5EF /* Assets.xcassets */; };
 		3F37E5551DC7755E0039B5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E5531DC7755E0039B5EF /* LaunchScreen.storyboard */; };
 		3F37E55D1DC775B00039B5EF /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E55C1DC775B00039B5EF /* Gradient.swift */; };
 		3F37E55F1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */; };
 		3F37E5611DC77D670039B5EF /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */; };
 		3F37E5631DC77E530039B5EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E5621DC77E530039B5EF /* ProfileViewController.swift */; };
+		3FE5C3D81DCD369200FF3E00 /* ExtensionBordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C3D71DCD369200FF3E00 /* ExtensionBordered.swift */; };
+		3FE5C3DE1DCD3DE800FF3E00 /* 3967.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C3DD1DCD3DE800FF3E00 /* 3967.ttf */; };
+		3FE5C3E01DCD415A00FF3E00 /* drugs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C3DF1DCD415A00FF3E00 /* drugs.ttf */; };
+		3FE5C3E21DCD546400FF3E00 /* TapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C3E11DCD546400FF3E00 /* TapBar.swift */; };
+		3FE5C3E41DCD5AE700FF3E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C3E31DCD5AE700FF3E00 /* Assets.xcassets */; };
 		3FF98F281DC786BE00D43F8C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98F271DC786BE00D43F8C /* Person.swift */; };
 		3FF98F2A1DC78BA800D43F8C /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98F291DC78BA800D43F8C /* FriendTableViewCell.swift */; };
 		74ACFE4BE9174EC9CC10A164 /* Pods_ShameApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64BE41D849812A0BFC3EB03 /* Pods_ShameApp.framework */; };
@@ -28,13 +32,17 @@
 		3F37E54A1DC7755E0039B5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F37E54C1DC7755E0039B5EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F37E54F1DC7755E0039B5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F37E5511DC7755E0039B5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F37E5541DC7755E0039B5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F37E5561DC7755E0039B5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F37E55C1DC775B00039B5EF /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7fonts.ru_mistral.ttf; sourceTree = "<group>"; };
 		3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		3F37E5621DC77E530039B5EF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3FE5C3D71DCD369200FF3E00 /* ExtensionBordered.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionBordered.swift; sourceTree = "<group>"; };
+		3FE5C3DD1DCD3DE800FF3E00 /* 3967.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3967.ttf; sourceTree = "<group>"; };
+		3FE5C3DF1DCD415A00FF3E00 /* drugs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drugs.ttf; sourceTree = "<group>"; };
+		3FE5C3E11DCD546400FF3E00 /* TapBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapBar.swift; sourceTree = "<group>"; };
+		3FE5C3E31DCD5AE700FF3E00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF98F271DC786BE00D43F8C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		3FF98F291DC78BA800D43F8C /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		A64BE41D849812A0BFC3EB03 /* Pods_ShameApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShameApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,11 +81,13 @@
 		3F37E5491DC7755E0039B5EF /* ShameApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FE5C3E31DCD5AE700FF3E00 /* Assets.xcassets */,
+				3FE5C3DF1DCD415A00FF3E00 /* drugs.ttf */,
+				3FE5C3DD1DCD3DE800FF3E00 /* 3967.ttf */,
 				3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */,
 				3F37E54A1DC7755E0039B5EF /* AppDelegate.swift */,
 				3F37E54C1DC7755E0039B5EF /* ViewController.swift */,
 				3F37E54E1DC7755E0039B5EF /* Main.storyboard */,
-				3F37E5511DC7755E0039B5EF /* Assets.xcassets */,
 				3F37E5531DC7755E0039B5EF /* LaunchScreen.storyboard */,
 				3F37E5561DC7755E0039B5EF /* Info.plist */,
 				3F37E55C1DC775B00039B5EF /* Gradient.swift */,
@@ -85,6 +95,8 @@
 				3F37E5621DC77E530039B5EF /* ProfileViewController.swift */,
 				3FF98F271DC786BE00D43F8C /* Person.swift */,
 				3FF98F291DC78BA800D43F8C /* FriendTableViewCell.swift */,
+				3FE5C3E11DCD546400FF3E00 /* TapBar.swift */,
+				3FE5C3D71DCD369200FF3E00 /* ExtensionBordered.swift */,
 			);
 			path = ShameApp;
 			sourceTree = "<group>";
@@ -136,7 +148,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Виталий Волков";
 				TargetAttributes = {
 					3F37E5461DC7755E0039B5EF = {
@@ -170,8 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F37E5551DC7755E0039B5EF /* LaunchScreen.storyboard in Resources */,
-				3F37E5521DC7755E0039B5EF /* Assets.xcassets in Resources */,
+				3FE5C3DE1DCD3DE800FF3E00 /* 3967.ttf in Resources */,
 				3F37E55F1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf in Resources */,
+				3FE5C3E01DCD415A00FF3E00 /* drugs.ttf in Resources */,
+				3FE5C3E41DCD5AE700FF3E00 /* Assets.xcassets in Resources */,
 				3F37E5501DC7755E0039B5EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,9 +248,11 @@
 				3FF98F281DC786BE00D43F8C /* Person.swift in Sources */,
 				3F37E5611DC77D670039B5EF /* FriendsListViewController.swift in Sources */,
 				3F37E54D1DC7755E0039B5EF /* ViewController.swift in Sources */,
+				3FE5C3E21DCD546400FF3E00 /* TapBar.swift in Sources */,
 				3F37E5631DC77E530039B5EF /* ProfileViewController.swift in Sources */,
 				3F37E54B1DC7755E0039B5EF /* AppDelegate.swift in Sources */,
 				3F37E55D1DC775B00039B5EF /* Gradient.swift in Sources */,
+				3FE5C3D81DCD369200FF3E00 /* ExtensionBordered.swift in Sources */,
 				3FF98F2A1DC78BA800D43F8C /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +297,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -330,6 +347,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -358,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B1C6F7D5A3EA6AF61106D46 /* Pods-ShameApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 58D38XLN7V;
 				INFOPLIST_FILE = ShameApp/Info.plist;
@@ -372,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E7FDF4BBA1D234369E2B9D5 /* Pods-ShameApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 58D38XLN7V;
 				INFOPLIST_FILE = ShameApp/Info.plist;

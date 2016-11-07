@@ -8,15 +8,34 @@
 
 import UIKit
 import SDWebImage
+import Alamofire
+import SwiftyJSON
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet weak var shameLabel: UILabel!
+    @IBOutlet weak var selectedLabel: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var photo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        name.text = UserDefaults.standard.value(forKey: "name") as? String ?? ""
-        photo.sd_setImage(with: URL(string: UserDefaults.standard.value(forKey: "photo") as? String ?? ""))
+        Alamofire.request("http://fastswapp.ru/countShame?user_id=\(UserDefaults.standard.value(forKey: "id") as? String ?? "")", method: .get).responseJSON { response in
+            
+            if let json = response.result.value {
+                let resultArray = JSON(json).array
+                self.name.isHidden = false
+                self.shameLabel.isHidden = false
+                self.selectedLabel.isHidden = false
+                self.name.text = resultArray?[0]["name"].string!
+                self.photo.sd_setImage(with: URL(string: (resultArray?[0]["photoURL"].string!)!))
+                self.shameLabel.text = "Взаимность: \((resultArray?[0]["shame"].string!)!)"
+                self.selectedLabel.text = "Выбрано: \((resultArray?[0]["selection"].string!)!)"
+                self.activity.stopAnimating()
+            }
+        }
+        
+        
         let gradient = CAGradientLayer().makeLayer()
         gradient.frame = self.view.bounds
         self.view.layer.insertSublayer(gradient, at: 0)
@@ -29,6 +48,11 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutClicked(_ sender: UIButton) {
+        UserDefaults.standard.set("", forKey: "id")
+        DispatchQueue.main.async(execute: {
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+
     }
 
     /*

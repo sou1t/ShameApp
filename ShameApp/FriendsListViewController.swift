@@ -58,7 +58,7 @@ extension FriendsListViewController: UITableViewDelegate, UITableViewDataSource
         else
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! FriendTableViewCell
-            cell.name.text = "\(friends[indexPath.row].name) \(friends[indexPath.row].surname)"
+            cell.name.text = "\(friends[indexPath.row].name)"
             let p1 = friends[(indexPath as NSIndexPath).row].photo
             let ph1 = URL(string: p1)
             cell.photo.sd_setImage(with: ph1)
@@ -70,6 +70,7 @@ extension FriendsListViewController: UITableViewDelegate, UITableViewDataSource
         //а это вызывается если юзер кликнул по какой-то ячейке
         UIApplication.shared.openURL(URL(string: "http://www.vk.com/id\(friends[indexPath.row].id)")!)
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         //а здесь нао вернуть кол-во секций(для простой таблицы это 1)
         return 1
