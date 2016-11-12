@@ -15,12 +15,6 @@ class TapBar: UITabBar{
         self.backgroundImage = UIImage.imageWithColor(color: UIColor.clear)
     }
 }
-
-
-
-
-
-
 extension UIImage {
     class func imageWithColor(color: UIColor) -> UIImage {
         let rect = CGRect(origin: CGPoint(x: 0, y:0), size: CGSize(width: 1, height: 1))

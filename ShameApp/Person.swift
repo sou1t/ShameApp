@@ -20,5 +20,4 @@ class Person {
         self.photo = photo
         self.shame = shame
     }
-    
 }

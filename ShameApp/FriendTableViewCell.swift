@@ -12,16 +12,13 @@ class FriendTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        //super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  @IBAction func buttonPressed(sender: UIButton){
+    guard let image = UIImage(named: "likefull") else {return}
+    sender.setImage(image, for: UIControlState())
+  }
 }

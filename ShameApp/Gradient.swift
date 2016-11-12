@@ -25,7 +25,4 @@ extension CAGradientLayer {
         
         return gradientLayer
     }
-
-    
-    
 }

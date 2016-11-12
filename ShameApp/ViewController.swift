@@ -62,14 +62,13 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let barViewControllers = segue.destination as! UITabBarController
-        let nav = barViewControllers.viewControllers![0] as! FriendsListViewController
-        //let lk = barViewControllers.viewControllers![1] as! ProfileViewController
-        
-        //let destinationViewController = nav.topViewController as! FriendsListViewController
-        
-        nav.friends = self.friends
+        if segue.identifier == "MainToNext"{
+          if let navController = segue.destination as? UINavigationController{
+            if let nextVC = navController.viewControllers[0] as? FriendsListViewController{
+               nextVC.friends = self.friends
+          }
+        }
+      }
     }
 
 
@@ -86,10 +85,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController:VKSdkDelegate, VKSdkUIDelegate{
-    
-    
     // MARK: - VKSdkDelegate
-    
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         UserDefaults.standard.set("\(result.token.userId!)", forKey: "id")
         Alamofire.request("http://fastswapp.ru/friendsShow?user_id=\(result.token.userId!)", method: .get).responseJSON { response in
@@ -105,20 +101,15 @@ extension ViewController:VKSdkDelegate, VKSdkUIDelegate{
                 self.performSegue(withIdentifier: "MainToNext", sender: self)
             }
         }
-        
-    
     }
-    
     func vkSdkUserAuthorizationFailed() {
         
     }
-    
     // MARK: - VKSdkUIDelegate
     
     func vkSdkShouldPresent(_ controller: UIViewController!) {
         present(controller, animated: true, completion: nil)
     }
-    
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         let vc = VKCaptchaViewController.captchaControllerWithError(captchaError)
         vc?.present(in: self)

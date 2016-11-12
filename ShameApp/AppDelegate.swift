@@ -9,6 +9,8 @@
 import UIKit
 import VK_ios_sdk
 
+let defaults = UserDefaults.standard
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VKSdk.initialize(withAppId: "4934283")
         application.statusBarStyle = .lightContent
         // Override point for customization after application launch.
+//        if defaults.string(forKey: "id") == ""{
+//          self.window = UIWindow(frame: UIScreen.main.bounds)
+//          let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//          let navigationVC = storyBoard.instantiateViewController(withIdentifier: "initialVC") as! UINavigationController
+//          self.window?.rootViewController = navigationVC
+//          self.window?.makeKeyAndVisible()
+//        }else{
+//          self.window = UIWindow(frame: UIScreen.main.bounds)
+//          let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//          let navigationVC = storyBoard.instantiateViewController(withIdentifier: "friendsNVC") as! UINavigationController
+//          self.window?.rootViewController = navigationVC
+//          self.window?.makeKeyAndVisible()
+//      }
         return true
     }
 
