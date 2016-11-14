@@ -13,7 +13,7 @@ class BluringView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
-    let blurEffect = UIBlurEffect(style: .light)
+    let blurEffect = UIBlurEffect(style: .dark)
     bluringView = UIVisualEffectView(effect: blurEffect)
     bluringView?.isUserInteractionEnabled = false
     bluringView?.frame = self.bounds

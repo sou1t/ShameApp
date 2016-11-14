@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BTNavigationDropdownMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ShameApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>418EA24E5663D39FE219321C5B3F9CBC</key>
+		<key>0B00C043F3095A0BC693FF1562830146</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>532CFE45BB4C40C558A9F5CA3915E7BE</key>
+		<key>251E2A12AFFB0DB8C780FD1DA3A5CFD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4161262A2BAC33683187E49F5F5AE110</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E73E0440EFD2BC3D007868335FC9F0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B3A98B33CE105364D91B3C92E93D0F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C8ECBC964875B7EA6D1FC3585DEF7AC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE7AC52022672B4E924F102134F7B27B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC801F5DDBB5BCD3680AB7BAA2AB17AF</key>
+		<key>FD23F1DA220A44C7E84F356B64871271</key>
 		<dict>
 			<key>primary</key>
 			<true/>

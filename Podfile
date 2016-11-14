@@ -8,4 +8,5 @@ pod 'VK-ios-sdk'
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'SDWebImage'
+pod 'BTNavigationDropdownMenu', :git => 'https://github.com/PhamBaTho/BTNavigationDropdownMenu.git', :branch => 'swift-3.0'
 end

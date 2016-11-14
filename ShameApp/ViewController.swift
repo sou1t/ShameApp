@@ -87,6 +87,7 @@ class ViewController: UIViewController {
 extension ViewController:VKSdkDelegate, VKSdkUIDelegate{
     // MARK: - VKSdkDelegate
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+        if(result.token != nil){
         UserDefaults.standard.set("\(result.token.userId!)", forKey: "id")
         Alamofire.request("http://fastswapp.ru/friendsShow?user_id=\(result.token.userId!)", method: .get).responseJSON { response in
             
@@ -100,10 +101,17 @@ extension ViewController:VKSdkDelegate, VKSdkUIDelegate{
                 self.activity.stopAnimating()
                 self.performSegue(withIdentifier: "MainToNext", sender: self)
             }
+            }
         }
     }
     func vkSdkUserAuthorizationFailed() {
-        
+        activity.stopAnimating()
+    }
+    
+    
+    
+    func vkSdkDidDismiss(_ controller: UIViewController!) {
+        activity.stopAnimating()
     }
     // MARK: - VKSdkUIDelegate
     

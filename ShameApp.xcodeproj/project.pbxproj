@@ -17,6 +17,7 @@
 		3F37E55D1DC775B00039B5EF /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E55C1DC775B00039B5EF /* Gradient.swift */; };
 		3F37E55F1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */; };
 		3F37E5611DC77D670039B5EF /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */; };
+		3FC2C0621DD8C86700EA1BEB /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC2C0611DD8C86700EA1BEB /* MainNavigationViewController.swift */; };
 		3FE5C3D81DCD369200FF3E00 /* ExtensionBordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C3D71DCD369200FF3E00 /* ExtensionBordered.swift */; };
 		3FE5C3DE1DCD3DE800FF3E00 /* 3967.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C3DD1DCD3DE800FF3E00 /* 3967.ttf */; };
 		3FE5C3E01DCD415A00FF3E00 /* drugs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C3DF1DCD415A00FF3E00 /* drugs.ttf */; };
@@ -42,6 +43,7 @@
 		3F37E55C1DC775B00039B5EF /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		3F37E55E1DC77B3B0039B5EF /* 7fonts.ru_mistral.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7fonts.ru_mistral.ttf; sourceTree = "<group>"; };
 		3F37E5601DC77D670039B5EF /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		3FC2C0611DD8C86700EA1BEB /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		3FE5C3D71DCD369200FF3E00 /* ExtensionBordered.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionBordered.swift; sourceTree = "<group>"; };
 		3FE5C3DD1DCD3DE800FF3E00 /* 3967.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3967.ttf; sourceTree = "<group>"; };
 		3FE5C3DF1DCD415A00FF3E00 /* drugs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drugs.ttf; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3F37E54A1DC7755E0039B5EF /* AppDelegate.swift */,
 				3F37E54C1DC7755E0039B5EF /* ViewController.swift */,
 				3F37E54E1DC7755E0039B5EF /* Main.storyboard */,
+				3FC2C0611DD8C86700EA1BEB /* MainNavigationViewController.swift */,
 				3F37E5531DC7755E0039B5EF /* LaunchScreen.storyboard */,
 				3F37E5561DC7755E0039B5EF /* Info.plist */,
 				3F37E55C1DC775B00039B5EF /* Gradient.swift */,
@@ -159,7 +162,7 @@
 				TargetAttributes = {
 					3F37E5461DC7755E0039B5EF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = RCVMS2D4SR;
+						DevelopmentTeam = 58D38XLN7V;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF98F281DC786BE00D43F8C /* Person.swift in Sources */,
+				3FC2C0621DD8C86700EA1BEB /* MainNavigationViewController.swift in Sources */,
 				3F37E5611DC77D670039B5EF /* FriendsListViewController.swift in Sources */,
 				29F894A61DD53FE900580240 /* ProfileView.swift in Sources */,
 				29F894AA1DD548C800580240 /* Extension.swift in Sources */,
@@ -386,11 +390,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RCVMS2D4SR;
+				DEVELOPMENT_TEAM = 58D38XLN7V;
 				INFOPLIST_FILE = ShameApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Vitalyi.ShameApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Vitalyi.Shame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -402,11 +406,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RCVMS2D4SR;
+				DEVELOPMENT_TEAM = 58D38XLN7V;
 				INFOPLIST_FILE = ShameApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Vitalyi.ShameApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Vitalyi.Shame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

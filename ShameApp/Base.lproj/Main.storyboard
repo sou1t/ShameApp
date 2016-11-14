@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,9 +53,10 @@
                                 </userDefinedRuntimeAttributes>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-Ua-csa">
-                                <rect key="frame" x="58" y="473" width="204" height="58"/>
+                                <rect key="frame" x="58" y="481" width="204" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="JOf-SD-fud"/>
+                                    <constraint firstAttribute="height" constant="50" id="nK5-HN-d2S"/>
+                                    <constraint firstAttribute="width" secondItem="hUd-Ua-csa" secondAttribute="height" multiplier="102:25" id="nOI-Wo-vvu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" image="vk_button"/>
@@ -66,12 +68,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qQL-Tf-vJP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4xy-ef-eqK"/>
+                            <constraint firstItem="hUd-Ua-csa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P6F-ih-ZHd"/>
                             <constraint firstItem="qQL-Tf-vJP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rk8-6d-M0u"/>
                             <constraint firstItem="FqW-yQ-WuW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="38" id="Spp-cs-62u"/>
-                            <constraint firstItem="hUd-Ua-csa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="aMP-9A-yZ2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hUd-Ua-csa" secondAttribute="bottom" constant="37" id="jNB-KJ-eOJ"/>
                             <constraint firstItem="FqW-yQ-WuW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jf3-u4-3Wa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hUd-Ua-csa" secondAttribute="bottom" constant="37" id="oUk-CY-hew"/>
-                            <constraint firstItem="hUd-Ua-csa" firstAttribute="centerX" secondItem="FqW-yQ-WuW" secondAttribute="centerX" id="rgn-Z4-OPb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V19-et-BDP"/>
@@ -82,9 +83,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="96.7016491754123"/>
+            <point key="canvasLocation" x="1072.5" y="96.126760563380287"/>
         </scene>
-        <!--Friends List View Controller-->
+        <!--Друзья-->
         <scene sceneID="pAk-Dj-67G">
             <objects>
                 <viewController id="iZ8-Jw-Yqj" customClass="FriendsListViewController" customModule="ShameApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,8 +127,8 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-sH-nda">
-                                                    <rect key="frame" x="76" y="26" width="192" height="29"/>
-                                                    <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="24"/>
+                                                    <rect key="frame" x="76" y="29" width="192" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -140,9 +141,6 @@
                                                     <state key="normal" image="like">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="buttonPressedWithSender:" destination="Ql9-xm-vL6" eventType="touchUpInside" id="jTf-hq-Qry"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -163,6 +161,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="buttonLike" destination="5ah-uS-POZ" id="MpI-Tf-gok"/>
                                             <outlet property="name" destination="z1b-sH-nda" id="DdH-vU-Xx5"/>
                                             <outlet property="photo" destination="bl4-ch-wm1" id="03F-Xv-8Wb"/>
                                         </connections>
@@ -193,7 +192,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zD7-pm-mgj">
-                                        <rect key="frame" x="34" y="16" width="180" height="181"/>
+                                        <rect key="frame" x="34" y="16" width="180" height="180"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="90"/>
@@ -219,16 +218,28 @@
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foj-wU-RS3">
                                         <rect key="frame" x="74" y="415.5" width="100" height="40"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="6JP-nG-WCm"/>
                                             <constraint firstAttribute="height" constant="40" id="idY-5J-okX"/>
                                         </constraints>
-                                        <state key="normal" title="Закрыть">
+                                        <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="17"/>
+                                        <state key="normal" title="Выйти">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="logoutClicked:" destination="sU2-sI-PQH" eventType="touchUpInside" id="znZ-sR-hj1"/>
+                                            <action selector="LogoutClicked:" destination="iZ8-Jw-Yqj" eventType="touchUpInside" id="vvC-bj-MQe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -274,15 +285,16 @@
                             <constraint firstItem="sU2-sI-PQH" firstAttribute="top" secondItem="Tge-rb-FGa" secondAttribute="top" constant="64" id="xAE-d3-q7G"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1yY-3F-NaI"/>
+                    <navigationItem key="navigationItem" title="Друзья" id="1yY-3F-NaI"/>
                     <connections>
+                        <outlet property="navigationBar" destination="1yY-3F-NaI" id="hNj-Dv-ZkR"/>
                         <outlet property="profileView" destination="sU2-sI-PQH" id="hB1-tJ-SoU"/>
                         <outlet property="tableView" destination="P0w-Qb-wd6" id="8tW-Su-0Hv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAS-1h-gF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617.5" y="95.070422535211264"/>
+            <point key="canvasLocation" x="2786" y="95"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="r7G-uy-3ve">
@@ -302,8 +314,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-Vj-OEn">
-                                <rect key="frame" x="46" y="331.5" width="230" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-Vj-OEn">
+                                <rect key="frame" x="46" y="332" width="230" height="21"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Выбрано" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-ia-AAr">
                                         <rect key="frame" x="0.0" y="0.0" width="129.5" height="20.5"/>
@@ -335,7 +347,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IsN-Y1-Ovf">
-                                <rect key="frame" x="70" y="71" width="180" height="183.5"/>
+                                <rect key="frame" x="70" y="71" width="180" height="183"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                         <integer key="value" value="90"/>
@@ -385,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAR-ZX-wq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707" y="96"/>
+            <point key="canvasLocation" x="3491" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQY-wo-T5q">
@@ -405,10 +417,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="96.7016491754123"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation View Controller-->
         <scene sceneID="2dL-8C-xbI">
             <objects>
-                <navigationController storyboardIdentifier="friendsNVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kSq-xM-wU8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="friendsNVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kSq-xM-wU8" customClass="MainNavigationViewController" customModule="ShameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iEI-Dh-XxG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -426,7 +438,7 @@
     </scenes>
     <resources>
         <image name="like" width="4952" height="4568"/>
-        <image name="profileButton" width="40" height="37"/>
+        <image name="profileButton" width="2008" height="2008"/>
         <image name="vk_button" width="414" height="103"/>
     </resources>
 </document>

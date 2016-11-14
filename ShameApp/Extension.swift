@@ -52,11 +52,12 @@ extension FriendsListViewController{
   }
   func setBarButton(){
     let rightButton = UIButton()
-    rightButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+    rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
     rightButton.setImage(UIImage(named: "profileButton"), for: UIControlState())
     rightButton.addTarget(self, action: #selector(myProfile), for: .touchUpInside)
     let rightBarButton = UIBarButtonItem()
     rightBarButton.customView = rightButton
+
     self.navigationItem.setRightBarButton(rightBarButton, animated: true)
   }
 }

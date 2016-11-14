@@ -2,8 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "likeDouble.pdf",
+      "filename" : "likeFull3.pdf",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
