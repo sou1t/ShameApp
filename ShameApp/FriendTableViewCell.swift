@@ -18,8 +18,4 @@ class FriendTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-  @IBAction func buttonPressed(sender: UIButton){
-    guard let image = UIImage(named: "likefull") else {return}
-    sender.setImage(image, for: UIControlState())
-  }
 }

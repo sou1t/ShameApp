@@ -296,109 +296,6 @@
             </objects>
             <point key="canvasLocation" x="2786" y="95"/>
         </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="r7G-uy-3ve">
-            <objects>
-                <viewController id="cog-vR-XlI" customClass="ProfileViewController" customModule="ShameApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wYZ-C4-kjz"/>
-                        <viewControllerLayoutGuide type="bottom" id="btz-8k-Uem"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="d58-mC-mSE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-5r-T63">
-                                <rect key="frame" x="131.5" y="263" width="58.5" height="26"/>
-                                <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-Vj-OEn">
-                                <rect key="frame" x="46" y="332" width="230" height="21"/>
-                                <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Выбрано" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-ia-AAr">
-                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Взаимности" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMr-5j-jwd">
-                                        <rect key="frame" x="129.5" y="0.0" width="100.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL9-kf-qxT">
-                                <rect key="frame" x="254" y="28" width="50" height="32"/>
-                                <fontDescription key="fontDescription" name="Drugs" family="Drugs" pointSize="16"/>
-                                <state key="normal" title="Выйти">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="logoutClicked:" destination="cog-vR-XlI" eventType="touchUpInside" id="wqe-XC-JxR"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IsN-Y1-Ovf">
-                                <rect key="frame" x="70" y="71" width="180" height="183"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                        <integer key="value" value="90"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cE2-9l-uML">
-                                <rect key="frame" x="142" y="266" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </activityIndicatorView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="34z-5r-T63" firstAttribute="centerX" secondItem="9gQ-Vj-OEn" secondAttribute="centerX" id="38c-A9-A9D"/>
-                            <constraint firstItem="IsN-Y1-Ovf" firstAttribute="top" secondItem="wYZ-C4-kjz" secondAttribute="bottom" constant="51" id="6Xg-lU-Bel"/>
-                            <constraint firstItem="9gQ-Vj-OEn" firstAttribute="top" secondItem="34z-5r-T63" secondAttribute="bottom" constant="43" id="7fc-Eh-SbN"/>
-                            <constraint firstItem="IsN-Y1-Ovf" firstAttribute="leading" secondItem="d58-mC-mSE" secondAttribute="leadingMargin" constant="54" id="8VB-Gc-22d"/>
-                            <constraint firstItem="IsN-Y1-Ovf" firstAttribute="centerX" secondItem="34z-5r-T63" secondAttribute="centerX" id="CHR-EK-UaV"/>
-                            <constraint firstItem="IsN-Y1-Ovf" firstAttribute="centerX" secondItem="d58-mC-mSE" secondAttribute="centerX" id="Grd-0p-77j"/>
-                            <constraint firstItem="iL9-kf-qxT" firstAttribute="trailing" secondItem="d58-mC-mSE" secondAttribute="trailingMargin" id="TDL-Q9-pEQ"/>
-                            <constraint firstItem="9gQ-Vj-OEn" firstAttribute="leading" secondItem="d58-mC-mSE" secondAttribute="leadingMargin" constant="30" id="aNW-JF-Aw9"/>
-                            <constraint firstItem="iL9-kf-qxT" firstAttribute="top" secondItem="wYZ-C4-kjz" secondAttribute="bottom" constant="8" symbolic="YES" id="bJ8-1q-bT9"/>
-                            <constraint firstItem="btz-8k-Uem" firstAttribute="top" secondItem="9gQ-Vj-OEn" secondAttribute="bottom" constant="167" id="oDx-Mg-JZA"/>
-                            <constraint firstItem="34z-5r-T63" firstAttribute="top" secondItem="IsN-Y1-Ovf" secondAttribute="bottom" constant="8" symbolic="YES" id="pgj-zK-9Yb"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="profileButton" id="TJx-bC-UQS">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="activity" destination="cE2-9l-uML" id="bha-AL-1QX"/>
-                        <outlet property="name" destination="34z-5r-T63" id="aOO-RY-HaH"/>
-                        <outlet property="photo" destination="IsN-Y1-Ovf" id="3CG-oZ-I1k"/>
-                        <outlet property="selectedLabel" destination="CWU-ia-AAr" id="Hwv-jG-Val"/>
-                        <outlet property="shameLabel" destination="FMr-5j-jwd" id="oVC-WI-eSd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oAR-ZX-wq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3491" y="96"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQY-wo-T5q">
             <objects>
@@ -438,7 +335,6 @@
     </scenes>
     <resources>
         <image name="like" width="4952" height="4568"/>
-        <image name="profileButton" width="2008" height="2008"/>
         <image name="vk_button" width="414" height="103"/>
     </resources>
 </document>

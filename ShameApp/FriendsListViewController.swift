@@ -17,7 +17,6 @@ class FriendsListViewController: UIViewController {
   var fullArr = [Person]()
   var shameList = [Person]()
   var selectedList = [Person]()
-
   var blurEffecNavBar : UIVisualEffectView?
   var statusBarView : UIView?
   var isProfileOpen = false
@@ -31,31 +30,9 @@ class FriendsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuNavigationBarInit()
         updateListOfFilters(mainArr: friends)
-        //let menuView = BTNavigationDropdownMenu(title: items[0], items: items as [AnyObject])
-        let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Друзья", items: items as [AnyObject])
-        menuView.menuTitleColor = UIColor.white
-        menuView.navigationBarTitleFont = UIFont(name: "Drugs", size: 20)
-        menuView.cellBackgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
-        menuView.cellTextLabelColor = UIColor.white
-        menuView.cellSelectionColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
-        menuView.shouldKeepSelectedCellColor = true
-        menuView.cellTextLabelColor = UIColor.white
-        menuView.cellTextLabelFont = UIFont(name: "Drugs", size: 20)
-        menuView.cellTextLabelAlignment = .center
-        menuView.arrowPadding = 15
-        menuView.animationDuration = 0.5
-        menuView.maskBackgroundColor = UIColor.white
-        menuView.cellSeparatorColor = UIColor.white
-        menuView.maskBackgroundOpacity = 0.3
-        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-            self.navigationBar.title = self.items[indexPath]
-            self.selectedOtherList(i: indexPath)}
-        self.navigationItem.titleView = menuView
-        //menuView.show()
-        setBarButton()
         self.view.backgroundColor = UIColor.clear
-        navigationBarCustomization()
         tableView.showsVerticalScrollIndicator = false
         tableView.reloadData()
         let gradient = CAGradientLayer().makeLayer()
@@ -110,17 +87,16 @@ class FriendsListViewController: UIViewController {
     }
     
     func likeClicked(button: UIButton) {
-        let index = button.tag
-        let state = self.friends[index].shame
+        let state = self.friends[button.tag].shame
         switch state {
         case "empty":
             let image = UIImage(named: "likefull")
             button.setImage(image, for: UIControlState())
-            likeUserWithId(id: self.friends[index].id)
+            likeUserWithId(id: self.friends[button.tag].id)
         case "alone":
             let image = UIImage(named: "like")
             button.setImage(image, for: UIControlState())
-            cancelLikeUserWithId(id: self.friends[index].id)
+            cancelLikeUserWithId(id: self.friends[button.tag].id)
         default:
             break;
         }
@@ -175,10 +151,37 @@ class FriendsListViewController: UIViewController {
         self.isProfileOpen = true
     }
   }
+    
+    
+    func menuNavigationBarInit(){
+        setBarButton()
+        navigationBarCustomization()
+        let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Друзья", items: items as [AnyObject])
+        menuView.menuTitleColor = UIColor.white
+        menuView.navigationBarTitleFont = UIFont(name: "Drugs", size: 20)
+        menuView.cellBackgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
+        menuView.cellTextLabelColor = UIColor.white
+        menuView.cellSelectionColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
+        menuView.shouldKeepSelectedCellColor = true
+        menuView.cellTextLabelColor = UIColor.white
+        menuView.cellTextLabelFont = UIFont(name: "Drugs", size: 20)
+        menuView.cellTextLabelAlignment = .center
+        menuView.arrowPadding = 15
+        menuView.animationDuration = 0.5
+        menuView.maskBackgroundColor = UIColor.white
+        menuView.cellSeparatorColor = UIColor.white
+        menuView.maskBackgroundOpacity = 0.3
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+            self.navigationBar.title = self.items[indexPath]
+            self.selectedOtherList(i: indexPath)}
+        self.navigationItem.titleView = menuView
+    }
 }
 
 extension FriendsListViewController: UITableViewDelegate, UITableViewDataSource
 {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //кол-во элементов для каждой из секций
         return friends.count
@@ -188,12 +191,11 @@ extension FriendsListViewController: UITableViewDelegate, UITableViewDataSource
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? FriendTableViewCell
             cell?.selectionStyle = .none
             cell?.name.text = "\(friends[indexPath.row].name)"
-            let p1 = friends[indexPath.row].photo
-            let ph1 = URL(string: p1)
-            cell?.photo.sd_setImage(with: ph1)
+            cell?.photo.sd_setImage(with: URL(string: friends[indexPath.row].photo))
             cell?.buttonLike.tag = indexPath.row
             cell?.buttonLike.addTarget(self, action: #selector(likeClicked), for: .touchUpInside)
         //отображаем лайк из бд
+        //cell?.buttonLike.setImage(UIImage(), for: UIControlState())
         switch friends[indexPath.row].shame {
         case "shame":
             let image = UIImage(named: "likeDouble")
@@ -234,5 +236,8 @@ extension FriendsListViewController: UITableViewDelegate, UITableViewDataSource
             }
         }
     }
+    
+    
+    
 
 }
